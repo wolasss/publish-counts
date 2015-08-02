@@ -5,7 +5,7 @@ A package to help you publish the count of a cursor, in real time.
 ## Installation
 
 ``` sh
-$ meteor add tmeasday:publish-counts
+$ meteor add ros:publish-counts
 ```
 
 ## API
