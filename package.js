@@ -1,7 +1,7 @@
 Package.describe({
-  name: "tmeasday:publish-counts",
+  name: "ros:publish-counts",
   summary: "Publish the count of a cursor, in real time",
-  version: "0.4.0",
+  version: "0.5.1",
   git: "https://github.com/percolatestudio/publish-counts.git"
 });
 
@@ -16,7 +16,7 @@ Package.on_use(function (api, where) {
 
 Package.on_test(function (api) {
   api.use([
-    'tmeasday:publish-counts',
+    'ros:publish-counts',
     'tinytest',
     'facts']);
 
