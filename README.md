@@ -12,7 +12,7 @@ So, with that said I've decided to fork that project.  Additions to tmeasday:pub
 
 The example showcases the performance differences between the two (though, as stated above, large collections are NOT the only reason to use fastCount).  Turning it off causes massive server instability.
 
-## Option fastCount `{fastCount: true}` (Default is false)
+## Option fastCount. Ex : `{fastCount: true}` (Default : **false**)
 
 If you were to think of this new feature as something that already exists, it's the equivalent of using a meteor method that returned the current count on a collection and then observing subsequent changes to the collection past the initial count.
 
