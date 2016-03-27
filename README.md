@@ -4,7 +4,7 @@ A fork of a package to help you publish the count of a cursor, in real time that
 
 ## Why?
 
-tmeasday:publish-counts is good, but can't doesn't know how to count past 50,000 without killing your server.  This fork adds an option (fastCount) that will let you, with nearly total accuracy, count large collections almost instantaneously to start and with minimal overhead.
+tmeasday:publish-counts is good, but can't count past 20,000 documents without killing your server.  This fork adds an option (fastCount) that will let you, with nearly total accuracy, count large collections almost instantaneously to start and with minimal overhead.
 
 fastCount can also be very beneficial for counting collections that are infrequently mutated (in situations where you append to a collection only, it is free speed over tmeasday:publish-counts)
 
@@ -14,7 +14,7 @@ The example showcases the performance differences between the two (though, as st
 
 ## Option fastCount. Ex : `{fastCount: true}` (Default : **false**)
 
-If you were to think of this new feature as something that already exists, it's the equivalent of using a meteor method that returned the current count on a collection and then observing subsequent changes to the collection past the initial count.
+If you want to think of this new feature in terms of operations that already exist, it's the equivalent of using a meteor method that returns the current count on a collection and then observing subsequent changes to the collection after skipping all documents in the initial count.
 
 This change is not without trade-offs; of course, things removed from your data set included in the initial count call will not be reflected in the total count. For most big counts it will not be noticeable if a count is slightly off, but still gives the user an idea of how the collection is growing.
 
