@@ -186,10 +186,4 @@ if (Meteor.isClient) {
         var count = this.findOne(name);
         return count && count.count || 0;
     };
-
-    if (Package.templating) {
-        Package.templating.Template.registerHelper('getPublishedCount', function (name) {
-            return Counts.get(name);
-        });
-    }
 }
