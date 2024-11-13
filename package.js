@@ -8,7 +8,6 @@ Package.describe({
 Package.onUse(function (api, where) {
   api.versionsFrom(['1.6.1', '2.3', '3.0']);
 
-  api.use(['blaze', 'templating'], 'client', { weak: true });
   api.use('mongo', 'client');
 
   api.addFiles('publish-counts.js');
